@@ -24,27 +24,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-import sys
-
-from PySide6 import QtWidgets
-
-from resteasy.ui.main import UiMain
-
-
-def main() -> int:
-    """
-    The main function that runs the program.
-
-    :return int: The exit code.
-    """
-
-    app = QtWidgets.QApplication([])
-
-    main_widget = UiMain()
-    main_widget.resize(768, 576)
-    main_widget.show()
-
-    return app.exec()
-
-
-sys.exit(main())
+NAME = "RestEasy"
+VERSION = (0, 1, 0)

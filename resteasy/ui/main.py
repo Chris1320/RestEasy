@@ -24,27 +24,18 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-import sys
+from PySide6 import QtCore, QtGui, QtWidgets
 
-from PySide6 import QtWidgets
-
-from resteasy.ui.main import UiMain
+from resteasy import info
 
 
-def main() -> int:
-    """
-    The main function that runs the program.
+class UiMain(QtWidgets.QWidget):
+    def __init__(self):
+        super().__init__()
 
-    :return int: The exit code.
-    """
+        self.title = QtWidgets.QLabel(info.NAME)
+        self.title.setFont(QtGui.QFont("Arial", 20))
+        self.title.setAlignment(QtCore.Qt.AlignmentFlag.AlignHCenter)
 
-    app = QtWidgets.QApplication([])
-
-    main_widget = UiMain()
-    main_widget.resize(768, 576)
-    main_widget.show()
-
-    return app.exec()
-
-
-sys.exit(main())
+        self.layout = QtWidgets.QVBoxLayout(self)  # type: ignore
+        self.layout.addWidget(self.title)
