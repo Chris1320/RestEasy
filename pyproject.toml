@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "resteasy"
+version = "0.1.0"
+description = "A restic frontend for backing up game data, Podman volumes, and other files."
+authors = ["chris1320 <chris1320is@protonmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+PyGObject = "^3.48.2"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.1.0"
+pytest = "^8.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
