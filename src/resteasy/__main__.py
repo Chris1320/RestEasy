@@ -37,6 +37,8 @@ class MyApplication(Gtk.Application):
 
     def do_activate(self):
         window = Gtk.ApplicationWindow(application=self, title="Hello, RestEasy!")
+        # l = Gtk.Label(label="Hello, RestEasy!")
+        # window.set_child(l)
         window.present()
 
 
