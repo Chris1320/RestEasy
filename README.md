@@ -26,3 +26,14 @@ RestEasy has two components: the client and the node. The client is used to mana
     uv run -m resteasy_node           # You can run the package itself,
     uv run fastapi run resteasy_node  # or use FastAPI to run the node.
     ```
+
+## Configuration
+
+### Node Configuration
+
+| Environment Variable | Type  | Description                                                                        |
+| -------------------- | ----- | ---------------------------------------------------------------------------------- |
+| `RESTEASY_HOST`      | `str` | Host interface to bind the node server to. Default is `127.0.0.1`.                 |
+| `RESTEASY_PORT`      | `int` | Port to bind the node server to. Default is `23145`.                               |
+| `RESTEASY_DEBUG`     | `str` | Enables debug mode when set to `true`.                                             |
+| `RESTEASY_DATA_DIR`  | `str` | The directory where RestEasy will store its data. Default is `~/.config/resteasy`. |
